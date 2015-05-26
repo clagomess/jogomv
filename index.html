@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Movimento Revolucionário</title>
+    <link rel="stylesheet" type="text/css" href="mr.css" />
+    <script type="text/javascript" src="jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="mr.js"></script>
+
+    <!-- Wow Such MetaTags! gibe seo plx -->
+    <meta name="description" content="Sua missão é derrotar os 'homi' que o impeça de manifestar 'pacificamente'. Você possui apenas um cartaz para se defender e uma pedra para ataque." />
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="Movimento Revolucionário"/>
+    <meta name="twitter:description" content="Sua missão é derrotar os 'homi' que o impeça de manifestar 'pacificamente'. Você possui apenas um cartaz para se defender e uma pedra para ataque."/>
+    <meta name="twitter:image" content="img/img_00.jpg"/>
+    <meta property="og:title" content="Movimento Revolucionário"/>
+    <meta property="og:image" content="img/img_00.jpg"/>
+    <meta property="og:description" content="Sua missão é derrotar os 'homi' que o impeça de manifestar 'pacificamente'. Você possui apenas um cartaz para se defender e uma pedra para ataque."/>
+    <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+	
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-47931737-3', 'gomespro.com.br');
+	ga('send', 'pageview');
+	</script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="mr">
+            <div id="load">
+                <div class="content">Carregando...</div>
+            </div>
+            <div id="boas-vindas" class="menu">
+                <div class="content">
+                    <h2>Movimento Revolucionário</h2>
+                    Sua missão é derrotar os 'homi' que o impeça de manifestar 'pacificamente'.<br />
+                    Você possui apenas um cartaz para se defender e uma pedra para ataque.<br />
+                    <br />
+                    Boa sorte!
+                    <a href="javascript:mr_fechar_boasvindas();" class="bt">Avançar</a>
+                </div>
+            </div>
+            <div id="char-select" class="menu" style="display:none">
+        	    <div class="content">
+                    <h2>Escolha seu personagem:</h2>
+                    <ul id="char-list">
+                	    <li char="char_bedbloc">
+                		    <img src="sprite/img_03.png"/>
+                		    Bedibloqui
+                	    </li>
+                	    <li char="char_feminazi">
+                		    <img src="sprite/img_04.png"/>
+                		    Feminazi
+                	    </li>
+                    </ul>
+                    <a href="javascript:start();" class="bt" style="display:none">Iniciar</a>
+                </div>
+            </div>
+            <div id="gameover" class="menu" style="display:none">
+                <div class="content">
+                    <h2>Você Perdeu!</h2>
+                    <h2>Pontuação: <span class="ptx"></span></h2>
+                    <a class="reiniciar" href="javascript:$('#char-select').show();$('#gameover').hide();">Reniciar</a>
+                </div>
+            </div>
+            <div id="charname"></div>
+            <div id="score">
+                Pontuação:
+                <div class="pts">0</div>
+            </div>
+            <div id="lifebar">
+                <div class="progress"></div>
+            </div>
+            <div id="skills">
+        	    Skills:
+        	    <ul>
+        		    <li><img src="sprite/img_05.png"></li>
+                    <li skill="pedra" progress="100">
+                        <img src="sprite/img_08.png"/>
+                        <div class="lifebar"><div class="progress" style="width:100%"></div></div>
+        		    </li>
+        		    <li skill="rojao" progress="100">
+                        <img src="sprite/img_07.png"/>
+                        <div class="lifebar"><div class="progress" style="width:100%"></div></div>
+        		    </li>
+        	    </ul>
+            </div>        
+        </div>
+
+        <br />
+        <br />
+
+        <h2>Skills:</h2>
+	    <table class="list" width="100%">
+		    <thead>
+			    <tr>
+				    <td>Imagem</td>
+				    <td>Nome</td>
+				    <td>Atalho</td>
+				    <td>Descrição</td>
+			    </tr>
+		    </thead>
+		    <tbody>
+			    <tr>
+				    <td><img src="sprite/img_05.png"/></td>
+				    <td>Pau</td>
+				    <td>(Q)</td>
+				    <td>Ataque: -10</td>
+			    </tr>
+			    <tr>
+				    <td><img src="sprite/img_08.png"/></td>
+				    <td>Pedra</td>
+				    <td>(W)</td>
+				    <td>Ataque: -30</td>
+			    </tr>
+                <tr>
+				    <td><img src="sprite/img_07.png"/></td>
+				    <td>Rojão</td>
+				    <td>(E)</td>
+				    <td>Ataque: -70</td>
+			    </tr>
+                <tr>
+				    <td><img src="sprite/img_11.png" width="32"/></td>
+				    <td>Defesa</td>
+				    <td>(SPACE)</td>
+				    <td>--</td>
+			    </tr>
+		    </tbody>
+	    </table>
+
+        <br />
+        <br />
+
+        <div style="text-align:center">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://cloud.gomespro.com.br/movimentorevolucionario/game" data-lang="pt">Tweetar</a>
+            <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + '://platform.twitter.com/widgets.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'twitter-wjs');</script>
+
+            <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fcloud.gomespro.com.br%2Fmovimentorevolucionario%2Fgame&amp;width&amp;layout=button&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=20" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:20px;" allowTransparency="true"></iframe>
+			
+			<br />
+			<br />
+			Você que é um moralista! isso é só um jogo!
+        </div>
+    </div>
+</body>
+</html>

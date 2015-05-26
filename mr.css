@@ -1,0 +1,314 @@
+﻿body {
+    font-family: Arial, Verdana;
+    font-size: 12px;
+}
+
+h1, h2 {
+    padding: 0px;
+    margin: 0 0 10px 0;
+    display: block;
+}
+
+@font-face {
+    font-family: MR;
+    src: url('ARCADECLASSIC.TTF');
+}
+
+#load {
+    background: #000;
+    position: absolute;
+    width: 600px;
+    height: 300px;
+    z-index: 9999;
+}
+
+    #load .content {
+        position: absolute;
+        width: 600px;
+        top: 50%;
+        text-align: center;
+    }
+
+#wrap {
+    width: 600px;
+    margin: 0 auto;
+}
+
+#mr {
+    width: 600px;
+    height: 300px;
+    background: #000;
+    position: relative;
+    background: url(sprite/img_00.jpg) repeat-x #000;
+    background-size: cover;
+    background-position: 0 0;
+    font-family: MR;
+    color: #ffd800;
+    text-shadow: 2px 2px #000;
+    overflow: hidden;
+    font-size: 16px;
+}
+
+    #mr .menu {
+        background: url(sprite/img_01.jpg) no-repeat;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 600px;
+        height: 300px;
+        z-index: 999;
+    }
+
+        #mr .menu .content {
+            background: #f00;
+            width: 380px;
+            height: 180px;
+            left: 50%;
+            top: 50%;
+            margin: -110px 0 0 -210px;
+            position: absolute;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+            #mr .menu .content h2 {
+                text-align: center;
+            }
+
+        #mr .menu .bt {
+            display: block;
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            color: #ffd800;
+        }
+
+
+    #mr .char_policia,
+    #mr .char_comuna,
+    #mr .char_comuna .sprite,
+    #mr .char_policia .sprite {
+        width: 80px;
+        height: 100px;
+    }
+
+    #mr .char_comuna,
+    #mr .char_policia {
+        position: absolute;
+        top: 150px;
+    }
+
+        #mr .char_policia .lifebar {
+            background: #f00;
+            width: 50px;
+            height: 4px;
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            margin-left: -40px;
+        }
+
+            #mr .char_policia .lifebar .progress {
+                background: #00ff21;
+                height: 4px;
+            }
+
+        #mr .char_policia .sprite {
+            background: url(sprite/img_02.png);
+        }
+
+        #mr .char_policia .spray {
+            width: 332px;
+            height: 127px;
+            background: url(sprite/img_10.png) no-repeat;
+            position: absolute;
+            left: -332px;
+            top: -40px;
+        }
+
+        #mr .char_comuna .cartaz {
+            width: 50px;
+            height: 46px;
+            position: absolute;
+            background: url(sprite/img_11.png) no-repeat;
+            right: -15px;
+            top: 10px;
+        }
+
+
+    #mr .char_comuna {
+        left: 40px;
+    }
+
+    #mr .char_bedbloc .sprite {
+        background: url(sprite/img_03.png);
+    }
+
+    #mr .char_feminazi .sprite {
+        background: url(sprite/img_04.png) no-repeat center;
+    }
+
+
+    #mr #charname {
+        position: absolute;
+        top: 10px;
+        left: 20px;
+    }
+
+    #mr #lifebar {
+        position: absolute;
+        left: 20px;
+        top: 30px;
+        background: #f00;
+        border: 1px solid #000;
+    }
+
+        #mr #lifebar,
+        #mr #lifebar .progress {
+            width: 200px;
+            height: 15px;
+        }
+
+            #mr #lifebar .progress {
+                background: #00ff21;
+                width: 100%;
+            }
+
+    #mr #char-list {
+        display: block;
+        margin: 0px;
+        list-style: none;
+        padding: 0px;
+        font-size: 0px;
+        text-align: center;
+    }
+
+        #mr #char-list li {
+            display: inline-block;
+            font-size: initial;
+            background: #333;
+            width: 100px;
+            height: 100px;
+            margin: 0 10px;
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            vertical-align: top;
+            border: 4px solid #f00;
+        }
+
+            #mr #char-list li[curr],
+            #mr #char-list li:hover {
+                border: 4px solid #ffd800;
+            }
+
+    #mr #score {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        text-align: right;
+    }
+
+    #mr #skills {
+        position: absolute;
+        left: 20px;
+        top: 55px;
+    }
+
+        #mr #skills ul {
+            padding: 0px;
+            margin: 5px 0 0 0;
+            list-style: none;
+            display: block;
+            font-size: 0px;
+        }
+
+        #mr #skills li {
+            display: inline-block;
+            vertical-align: top;
+            background: #FFF;
+            padding: 5px;
+            width: 32px;
+            height: 32px;
+            margin-right: 5px;
+            border-radius: 5px;
+            text-align: center;
+            position: relative;
+        }
+
+            #mr #skills li .lifebar {
+                position: absolute;
+                left: 2px;
+                bottom: 2px;
+                background: #f00;
+                border: 1px solid #000;
+                width: 35px;
+            }
+
+            #mr #skills li .progress {
+                height: 4px;
+                background: #00ff21;
+            }
+
+    #mr .projetil {
+        width: 32px;
+        height: 32px;
+        position: absolute;
+        background: #000;
+        top: 170px;
+    }
+
+    #mr .projetil_pau {
+        background: url(sprite/img_05.png) no-repeat;
+    }
+
+    #mr .projetil_pedra {
+        background: url(sprite/img_08.png) no-repeat;
+    }
+
+    #mr .projetil_rojao {
+        background: url(sprite/img_07.png) no-repeat;
+    }
+
+#gameover .content {
+    position: relative;
+}
+
+#gameover .reiniciar {
+    color: #FFF;
+    font-size: 20px;
+    display: block;
+    text-align: center;
+    position: absolute;
+    bottom: 40px;
+    width: 380px;
+    color: #ffd800;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+    table td {
+        word-wrap: break-word;
+        padding: 4px;
+    }
+
+    table.list td {
+        border: 1px solid #CCC;
+    }
+
+    table.list thead tr,
+    table.list tfoot tr {
+        background: #efefef;
+        font-weight: bolder;
+    }
+
+    table.list thead td {
+        padding: 6px;
+    }
+
+    table.list tfoot td {
+        font-size: 10px;
+        font-weight: normal;
+    }
